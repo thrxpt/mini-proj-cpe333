@@ -1,26 +1,21 @@
 # mini-project-os
 
-Operating Systems mini project — compile and install a Linux kernel on Ubuntu 24.04 LTS, with a step-by-step worklog of everything actually done.
+Operating Systems Mini-Project — compile and install a Linux kernel on Ubuntu 24.04 LTS, with a step-by-step worklog of everything actually done.
 
 ## Members
 
-| Nickname | Name | Student ID | Folder / Work |
-|----------|------|------------|---------------|
-| Fuse | Onsinee Chotchuangsakulchai | 67070501078 | `member/Fuse/` — kernel `6.8.12-fuse2005` (done) |
+| Nickname | Name | Student ID | Folder |
+|----------|------|------------|--------|
+| — | Kamonnat Seetakai | 67070501001 | — |
 | Pink | Benyapha Rattanakhunodom | 67070501030 | `member/Pink/` |
 | Posh | Pawarisa Thongchua | 67070501032 | `member/Posh/` |
-| — | Kamonnat Seetakai | 67070501001 | — |
 | — | Chanya Poolketkij | 67070501058 | — |
-| — | Theeraphat Jaingam | 67070501063 | — |
+| Japan | Theeraphat Jaingam | 67070501063 | `member/Japan/` |
+| Fuse | Onsinee Chotchuangsakulchai | 67070501078 | `member/Fuse/` |
 
-## Fuse's work (done 2026-09-22)
+Each member's work and worklog lives in their own folder under `member/`.
 
-- Downloaded kernel `linux-6.8.12` from kernel.org, configured from `/proc/config.gz` with a `-fuse2005` tag
-- `make -j16` (~27 min) → `make modules_install` + `make install`, all successful
-- Booted on WSL2 via `.wslconfig` → `uname -r` = `6.8.12-fuse2005`
-- Full details: [`member/Fuse/Kernel-Compilation-Worklog.md`](member/Fuse/Kernel-Compilation-Worklog.md)
-
-## Repo structure
+## File Structure
 
 ```
 mini-project-os/
@@ -28,27 +23,47 @@ mini-project-os/
 └── member/
     ├── Fuse/
     │   ├── Kernel-Compilation-Worklog.md
-    │   └── Image/          # screenshots for the worklog
+    │   └── Image/        
     ├── Pink/
     └── Posh/
 ```
 
-## Reproduce (short version)
+## Project Status
 
-```bash
-# On Ubuntu 24.04 (WSL2 / VMware / VirtualBox)
-mkdir -p ~/kernel-build && cd ~/kernel-build
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.8.12.tar.xz
-tar -xf linux-6.8.12.tar.xz && cd linux-6.8.12
-zcat /proc/config.gz > .config   # on a VM use: cp /boot/config-$(uname -r) .config
-make olddefconfig
-./scripts/config --set-str CONFIG_LOCALVERSION '-fuse2005'
-make -j$(nproc)
-sudo make modules_install && sudo make install
-# VM: sudo update-grub && sudo reboot
-# WSL2: copy arch/x86/boot/bzImage to Windows, point to it in .wslconfig, then wsl --shutdown
-uname -r   # should show ...-fuse2005
-```
+| Member | Environment | Status |
+|--------|-------------|--------|
+| Fuse | WSL2 Ubuntu 24.04 | Build + boot passed (`6.8.12-fuse2005`), worklog done |
+| Pink | — | Pending |
+| Posh | — | Pending |
+| Japan | — | Pending |
+
+## Build Results Summary
+
+| Member | CPU / RAM | Build time (`make -j`) | Kernel result | Boot test |
+|--------|-----------|------------------------|---------------|-----------|
+| Fuse | Ryzen 7 8840U, 16 vCPU / 15 GiB | ~27 min (`-j16`) | `6.8.12-fuse2005` | Passed (WSL2 + rollback round-trip) |
+| Pink | TBD | TBD | TBD | TBD |
+| Posh | TBD | TBD | TBD | TBD |
+| Japan | TBD | TBD | TBD | TBD |
+
+Each member fills in their own row after their build finishes (spec section 5.1).
+
+## Deliverables Checklist
+
+- [x] Fuse worklog (`member/Fuse/Kernel-Compilation-Worklog.md`)
+- [ ] Pink worklog
+- [ ] Posh worklog
+- [ ] Japan worklog
+- [ ] Screenshots in each member's `Image/` folder (GRUB menu, `uname -r`, rollback)
+- [ ] Team comparison table completed (all rows filled)
+- [ ] Final group report (`REPORT.md`)
+
+## References
+
+- [Ubuntu Kernel Build Guide](https://ubuntu.com/kernel/docs/how-to/develop-customise/build-kernel/)
+- [Enable kernel source repositories](https://ubuntu.com/kernel/docs/how-to/source-code/enable-source-repositories/)
+- [Obtain kernel source with Git](https://ubuntu.com/kernel/docs/how-to/source-code/obtain-kernel-source-git/)
+- [Linux kernel archives](https://cdn.kernel.org/pub/linux/kernel/v6.x/)
 
 ---
 

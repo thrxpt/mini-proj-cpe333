@@ -72,6 +72,12 @@ $ df -h / → /dev/sdd 1007G, 953G available
 $ nproc → 16
 $ gcc --version → gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
 $ make --version → GNU Make 4.3
+
+$ wsl --version   # Windows side, virtualization platform version
+WSL version: 2.6.3.0
+Kernel version: 6.6.87.2-1
+WSLg version: 1.0.71
+Windows version: 10.0.26200.9457
 ```
 
 ### 1.3 Build dependencies
@@ -134,6 +140,11 @@ grep LOCALVERSION .config   # CONFIG_LOCALVERSION="-fuse2005"
 I based my config on the running WSL2 kernel config so all Hyper-V/9p graphics
 options stay enabled. On a VMware/VirtualBox VM I would instead run
 `cp /boot/config-$(uname -r) .config && make olddefconfig` (or `make defconfig`).
+
+I also opened the full `make menuconfig` UI to review the options: `mconf` and the
+`lxdialog` components built cleanly and the "Linux/x86 6.8.12 Kernel Configuration"
+screen rendered (exit 0). I left my `.config` unchanged afterwards (md5-verified),
+since `olddefconfig` plus `scripts/config` had already set everything I needed.
 
 ### 2.4 Compile (started 15:48, `bzImage` done 16:13, modules done ~16:15)
 
@@ -203,10 +214,30 @@ $ uptime → system up and functional right after reboot
 - [x] `modules_install` and `make install` both exited 0
 - [x] After reboot, `uname -r` shows `6.8.12-fuse2005`
 - [x] `dmesg` is clean (only harmless WSL2/Hyper-V notices about the legacy timer, ACPI _OSC, and a WSL network check)
+- [x] Rollback tested with a full round-trip (see 3.3 below)
 - [ ] Screenshots to add under `member/Fuse/Image/` (terminal `uname` capture for WSL2 / GRUB menu for VM)
 
-To roll back to the stock kernel: delete `C:\Users\ACER\.wslconfig`, run `wsl --shutdown`,
-and WSL2 boots `6.6.87.2-microsoft-standard-WSL2` again.
+### 3.3 Rollback test (my actual round-trip on WSL2)
+
+Since WSL2 has no GRUB menu, I tested recovery by removing and restoring the custom kernel:
+
+```bash
+# Step 1: roll back to stock (Windows side)
+cp C:\Users\ACER\.wslconfig C:\Users\ACER\.wslconfig.bak
+rm C:\Users\ACER\.wslconfig
+wsl --shutdown
+wsl -d Ubuntu-24.04 -- uname -r
+# → 6.6.87.2-microsoft-standard-WSL2   (stock kernel, system works)
+
+# Step 2: restore my custom kernel
+cp C:\Users\ACER\.wslconfig.bak C:\Users\ACER\.wslconfig
+wsl --shutdown
+wsl -d Ubuntu-24.04 -- uname -r
+# → 6.8.12-fuse2005   (custom kernel back, system works)
+```
+
+Both directions booted cleanly, so the recovery path is proven. The GRUB-menu
+variant of this test still needs a VMware/VirtualBox VM.
 
 ---
 
@@ -228,6 +259,7 @@ and WSL2 boots `6.6.87.2-microsoft-standard-WSL2` again.
 - **VM vs WSL2:** a VM gives the full GRUB/initramfs/dkms boot test with snapshots; WSL2 gave me a fast 16-core build (~27 minutes vs hours on a 2-vCPU VM) but boots via a `.wslconfig` kernel replacement instead of GRUB. I executed the WSL2 path end to end.
 - **Cost:** 136 MB download → ~12 GB build tree + 2.3 GB installed modules + 218 MB initramfs; about 30 minutes wall-clock with `-j16` and 15 GiB RAM. On a 2-vCPU/4 GB lab VM I would expect 2–4x longer.
 - **Conclusion:** I compiled, installed, and booted my custom kernel `6.8.12-fuse2005` on Ubuntu 24.04 (WSL2). `uname -r`, `/proc/version`, `dmesg`, and the module tree all confirm the new kernel is live. Remaining work: add screenshots to `member/Fuse/Image/`, and repeat the GRUB path once on a VMware/VirtualBox VM with the same source and config method.
+- **Team matrix (spec 5.1, waiting on teammates):** only my build data exists so far (Ryzen 7 8840U / 16 vCPU / 15 GiB RAM / ~27 min / success). Each member adds one row (hardware, build time, outcome) once their build is done; Pink and Posh folders are reserved for their worklogs.
 
 ### My method vs the other group's method
 
