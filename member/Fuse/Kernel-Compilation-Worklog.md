@@ -215,7 +215,7 @@ $ uptime → system up and functional right after reboot
 - [x] After reboot, `uname -r` shows `6.8.12-fuse2005`
 - [x] `dmesg` is clean (only harmless WSL2/Hyper-V notices about the legacy timer, ACPI _OSC, and a WSL network check)
 - [x] Rollback tested with a full round-trip (see 3.3 below)
-- [ ] Screenshots to add under `member/Fuse/Image/` (terminal `uname` capture for WSL2 / GRUB menu for VM)
+- [x] Screenshots in `member/Fuse/Image/` (1.1, 1.2, 2.1-2.5, 3.2); GRUB menu (3.1) and GRUB rollback (3.3) still need a VM
 
 ### 3.3 Rollback test (my actual round-trip on WSL2)
 
