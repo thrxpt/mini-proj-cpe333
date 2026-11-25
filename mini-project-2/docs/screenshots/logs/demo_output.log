@@ -1,0 +1,67 @@
+miniramfs — Mini RAM-Based File System demo   (kernel 6.8.12-fuse2005)
+
+━━━ [1] Load module ━━━
+$ insmod src/miniramfs.ko
+$ grep miniramfs /proc/filesystems
+nodev	miniramfs
+
+━━━ [2] Operation 1: MOUNT ━━━
+$ mount -t miniramfs none /mnt/test
+$ mount | grep miniramfs
+none on /mnt/test type miniramfs (rw,relatime)
+
+━━━ [3] Operation 2: CREATE DIRECTORY (mkdir) ━━━
+$ mkdir /mnt/test/docs /mnt/test/docs/sub
+
+━━━ [4] Operation 3: CREATE FILE ━━━
+$ touch /mnt/test/docs/empty.txt
+$ ls -l /mnt/test/docs/empty.txt
+-rw-r--r-- 1 root root 0 Nov 25 14:27 /mnt/test/docs/empty.txt
+# new empty file: size 0
+
+━━━ [5] Operation 4: WRITE FILE ━━━
+$ echo 'CPE333 OS' > /mnt/test/docs/note.txt
+$ echo 'Line 2' >> /mnt/test/docs/note.txt
+# append: size grows from 10 to 17 bytes
+
+━━━ [6] Operation 5: READ FILE ━━━
+$ cat /mnt/test/docs/note.txt
+CPE333 OS
+Line 2
+
+━━━ [7] Operation 6: LIST DIRECTORY (ls) ━━━
+$ ls -la /mnt/test
+total 4
+drwxr-xr-x 3 root root    0 Nov 25 14:27 .
+drwxr-xr-x 8 root root 4096 Nov 24 22:12 ..
+drwxr-xr-x 3 root root    0 Nov 25 14:27 docs
+$ ls -la /mnt/test/docs
+total 0
+drwxr-xr-x 3 root root  0 Nov 25 14:27 .
+drwxr-xr-x 3 root root  0 Nov 25 14:27 ..
+-rw-r--r-- 1 root root  0 Nov 25 14:27 empty.txt
+-rw-r--r-- 1 root root 17 Nov 25 14:27 note.txt
+drwxr-xr-x 2 root root  0 Nov 25 14:27 sub
+
+━━━ [8] Limit check: write > 1 MiB is rejected (EFBIG), no crash ━━━
+$ head -c 2M /dev/zero > /mnt/test/big.bin
+head: error writing 'standard output': File too large
+$ ls -l /mnt/test/big.bin
+-rw-r--r-- 1 root root 1048576 Nov 25 14:27 /mnt/test/big.bin
+
+━━━ [9] Operation 7: UNMOUNT + remove module ━━━
+$ umount /mnt/test
+$ ls /mnt/test
+# data lived only in RAM -> gone after umount
+$ rmmod miniramfs
+
+━━━ [10] Kernel log (dmesg) ━━━
+$ dmesg | grep 'miniramfs:' | tail -5
+[  358.114897] miniramfs: module unloaded (live files=0, live bytes=0)
+[  373.509867] miniramfs: module loaded
+[  374.510647] miniramfs: mounted
+[  381.374663] miniramfs: unmounted (live files=0, live bytes=0)
+[  381.432489] miniramfs: module unloaded (live files=0, live bytes=0)
+# live files=0, live bytes=0  -> every buffer was freed (no leak)
+
+Demo finished.

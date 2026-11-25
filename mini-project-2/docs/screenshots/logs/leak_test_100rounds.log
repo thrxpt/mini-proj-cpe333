@@ -1,0 +1,43 @@
+=== miniramfs leak test  Wed Nov 25 14:25:20 +07 2026 | kernel 6.8.12-fuse2005 ===
+rounds=100  per round: 20 dirs x 15 files (+ 1x 200 KiB file per dir)
+kmemleak: NOT available (CONFIG_DEBUG_KMEMLEAK not set) -> using slabinfo + module counters
+round 10/100 ok (300 files written)
+round 20/100 ok (300 files written)
+round 30/100 ok (300 files written)
+round 40/100 ok (300 files written)
+round 50/100 ok (300 files written)
+round 60/100 ok (300 files written)
+round 70/100 ok (300 files written)
+round 80/100 ok (300 files written)
+round 90/100 ok (300 files written)
+round 100/100 ok (300 files written)
+elapsed: 25 s
+
+--- /proc/meminfo (kB) ---
+field                before        after      delta
+MemFree:           15534488     15538892      +4404
+SReclaimable:         16432        16260       -172
+SUnreclaim:           65072        65044        -28
+Slab:                 81504        81304       -200
+
+--- /proc/slabinfo active objects ---
+cache              before      after    delta
+dentry               6121       5891     -230
+inode_cache          2572       2527      -45
+kmalloc-128          5696       5696       +0
+kmalloc-16           8268       8448     +180
+kmalloc-1k           1823       1823       +0
+kmalloc-256          2583       2581       -2
+kmalloc-2k            942        908      -34
+kmalloc-32           6489       6489       +0
+kmalloc-4k            656        679      +23
+kmalloc-512          3758       3755       -3
+kmalloc-64           6307       6118     -189
+kmalloc-8k            296        296       +0
+
+--- dmesg (module counters) ---
+[  299.581031] miniramfs: unmounted (live files=0, live bytes=0)
+[  299.833497] miniramfs: unmounted (live files=0, live bytes=0)
+[  300.945690] miniramfs: module unloaded (live files=0, live bytes=0)
+kernel Oops/BUG/WARNING lines: 0
+=== RESULT: PASS - no measurable leak after 100 rounds ===

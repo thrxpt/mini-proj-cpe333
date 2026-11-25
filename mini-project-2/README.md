@@ -39,7 +39,15 @@ sudo rmmod miniramfs
 dmesg | tail
 ```
 
-ทดสอบอัตโนมัติ: `sudo bash ../tests/test_miniramfs.sh` (บันทึกผลลง `test_result.log`)
+ทดสอบ (รันจากโฟลเดอร์ `mini-project-2/`):
+
+| สคริปต์ | ทำอะไร | Log |
+| :-- | :-- | :-- |
+| `sudo bash tests/test_miniramfs.sh` | TC-01..TC-07 + EDGE-1..10 (36 checks) | `tests/test_result.log`, `docs/screenshots/logs/dmesg_test.log` |
+| `sudo bash tests/leak_test.sh` | mount → 300 ไฟล์ → umount × 50 รอบ, เทียบ Slab/slabinfo | `docs/screenshots/logs/leak_test.log` |
+| `sudo bash tests/demo.sh` | demo ถ่ายคลิป ~2 นาที (`DELAY=1` = ซ้อมเร็ว) | `docs/screenshots/logs/demo_output.log` |
+
+Screenshot ที่แต่ละคนต้องถ่าย: `docs/screenshots/CHECKLIST.md`
 
 ถ้า `make` ไม่เจอ build tree ให้ชี้เอง: `make KDIR=~/linux-6.8.12`
 (ต้องเป็น tree ที่ใช้ build kernel ที่กำลังรันอยู่ และเคยรัน `make modules_prepare` / `modules_install`)
@@ -48,8 +56,9 @@ dmesg | tail
 
 - [x] Skeleton โค้ดครบ 7 operations (เขียนตาม API ของ kernel 6.8)
 - [x] compile ผ่านบน 6.8.12-fuse2005 (0 error / 0 warning, ไม่ต้องแก้ miniramfs.c)
-- [x] รัน test script ผ่านทุกข้อ (21/21, ดู `docs/test_result.log`)
-- [ ] เก็บ screenshot + dmesg
+- [x] รัน test script ผ่านทุกข้อ (S4: 36/36 รวม EDGE-7..10, ดู `tests/test_result.log`)
+- [x] Leak test 50 รอบผ่าน (live files=0, live bytes=0) และไม่มี Oops; log + dmesg อยู่ที่ `docs/screenshots/logs/`
+- [ ] ถ่าย screenshot ตาม `docs/screenshots/CHECKLIST.md`
 - [ ] รายงาน / สไลด์ / วิดีโอ
 
 ## จุดที่ต้องตรวจเมื่อ compile (ขึ้นกับเวอร์ชัน kernel)

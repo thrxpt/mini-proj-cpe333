@@ -36,6 +36,13 @@ struct miniramfs_file_data {
 	size_t  capacity;	/* allocated bytes */
 };
 
+/*
+ * Leak accounting (kernel has no kmemleak): number of live file_data structs
+ * and bytes of file buffers currently allocated. Both must be 0 after umount.
+ */
+static atomic_t      miniramfs_live_files = ATOMIC_INIT(0);
+static atomic_long_t miniramfs_live_bytes = ATOMIC_LONG_INIT(0);
+
 static const struct super_operations miniramfs_sops;
 static const struct inode_operations miniramfs_dir_iops;
 static const struct inode_operations miniramfs_file_iops;
@@ -66,6 +73,7 @@ static int miniramfs_reserve(struct miniramfs_file_data *fd, size_t need)
 	if (!p)
 		return -ENOMEM;
 	memset(p + fd->capacity, 0, newcap - fd->capacity);	/* keep zero invariant */
+	atomic_long_add(newcap - fd->capacity, &miniramfs_live_bytes);
 	fd->data = p;
 	fd->capacity = newcap;
 	return 0;
@@ -224,6 +232,7 @@ static struct inode *miniramfs_get_inode(struct super_block *sb,
 			iput(inode);
 			return NULL;
 		}
+		atomic_inc(&miniramfs_live_files);
 		inode->i_private = fd;
 		inode->i_op  = &miniramfs_file_iops;
 		inode->i_fop = &miniramfs_file_fops;
@@ -292,6 +301,8 @@ static void miniramfs_evict_inode(struct inode *inode)
 	truncate_inode_pages_final(&inode->i_data);
 	clear_inode(inode);
 	if (fd) {			/* prevents memory leak on unlink / umount */
+		atomic_long_sub(fd->capacity, &miniramfs_live_bytes);
+		atomic_dec(&miniramfs_live_files);
 		kfree(fd->data);
 		kfree(fd);
 		inode->i_private = NULL;
@@ -334,7 +345,9 @@ static struct dentry *miniramfs_mount(struct file_system_type *fs_type,
 static void miniramfs_kill_sb(struct super_block *sb)
 {
 	kill_litter_super(sb);	/* drops pinned dentries -> evict_inode frees data */
-	pr_info("miniramfs: unmounted\n");
+	pr_info("miniramfs: unmounted (live files=%d, live bytes=%ld)\n",
+		atomic_read(&miniramfs_live_files),
+		atomic_long_read(&miniramfs_live_bytes));
 }
 
 static struct file_system_type miniramfs_fs_type = {
@@ -358,7 +371,9 @@ static int __init miniramfs_init(void)
 static void __exit miniramfs_exit(void)
 {
 	unregister_filesystem(&miniramfs_fs_type);
-	pr_info("miniramfs: module unloaded\n");
+	pr_info("miniramfs: module unloaded (live files=%d, live bytes=%ld)\n",
+		atomic_read(&miniramfs_live_files),
+		atomic_long_read(&miniramfs_live_bytes));
 }
 
 module_init(miniramfs_init);

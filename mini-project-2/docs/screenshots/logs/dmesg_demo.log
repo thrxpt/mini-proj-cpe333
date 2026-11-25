@@ -1,0 +1,5 @@
+[  370.514295] miniramfs-demo-start
+[  373.509867] miniramfs: module loaded
+[  374.510647] miniramfs: mounted
+[  381.374663] miniramfs: unmounted (live files=0, live bytes=0)
+[  381.432489] miniramfs: module unloaded (live files=0, live bytes=0)

@@ -1,0 +1,5 @@
+[  248.141447] miniramfs-test-start
+[  248.155691] miniramfs: module loaded
+[  248.160116] miniramfs: mounted
+[  248.319874] miniramfs: unmounted (live files=0, live bytes=0)
+[  248.352471] miniramfs: module unloaded (live files=0, live bytes=0)

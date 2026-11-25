@@ -1,0 +1,546 @@
+[   93.239066] miniramfs-test-start
+[   93.253372] miniramfs: loading out-of-tree module taints kernel.
+[   93.254748] miniramfs: module loaded
+[   93.259382] miniramfs: mounted
+[  241.239488] miniramfs: unmounted (live files=0, live bytes=0)
+[  241.271141] miniramfs: module unloaded (live files=0, live bytes=0)
+[  241.307672] miniramfs-test-start
+[  241.327616] miniramfs: module loaded
+[  241.334090] miniramfs: mounted
+[  241.514279] miniramfs: unmounted (live files=0, live bytes=0)
+[  241.538346] miniramfs: module unloaded (live files=0, live bytes=0)
+[  248.141447] miniramfs-test-start
+[  248.155691] miniramfs: module loaded
+[  248.160116] miniramfs: mounted
+[  248.319874] miniramfs: unmounted (live files=0, live bytes=0)
+[  248.352471] miniramfs: module unloaded (live files=0, live bytes=0)
+[  252.298095] miniramfs: module loaded
+[  252.300537] miniramfs-leaktest-start
+[  252.304440] miniramfs: mounted
+[  252.310266] miniramfs: unmounted (live files=0, live bytes=0)
+[  253.373085] miniramfs: mounted
+[  253.639014] miniramfs: unmounted (live files=0, live bytes=0)
+[  253.642237] miniramfs: mounted
+[  253.879372] miniramfs: unmounted (live files=0, live bytes=0)
+[  253.883889] miniramfs: mounted
+[  254.143060] miniramfs: unmounted (live files=0, live bytes=0)
+[  254.146511] miniramfs: mounted
+[  254.418390] miniramfs: unmounted (live files=0, live bytes=0)
+[  254.421970] miniramfs: mounted
+[  254.668185] miniramfs: unmounted (live files=0, live bytes=0)
+[  254.671623] miniramfs: mounted
+[  254.919932] miniramfs: unmounted (live files=0, live bytes=0)
+[  254.923420] miniramfs: mounted
+[  255.175393] miniramfs: unmounted (live files=0, live bytes=0)
+[  255.179143] miniramfs: mounted
+[  255.427099] miniramfs: unmounted (live files=0, live bytes=0)
+[  255.429934] miniramfs: mounted
+[  255.685272] miniramfs: unmounted (live files=0, live bytes=0)
+[  255.688647] miniramfs: mounted
+[  255.937233] miniramfs: unmounted (live files=0, live bytes=0)
+[  255.940531] miniramfs: mounted
+[  256.178522] miniramfs: unmounted (live files=0, live bytes=0)
+[  256.181447] miniramfs: mounted
+[  256.430651] miniramfs: unmounted (live files=0, live bytes=0)
+[  256.434851] miniramfs: mounted
+[  256.691748] miniramfs: unmounted (live files=0, live bytes=0)
+[  256.695982] miniramfs: mounted
+[  256.979999] miniramfs: unmounted (live files=0, live bytes=0)
+[  256.984611] miniramfs: mounted
+[  257.234596] miniramfs: unmounted (live files=0, live bytes=0)
+[  257.238761] miniramfs: mounted
+[  257.484885] miniramfs: unmounted (live files=0, live bytes=0)
+[  257.488005] miniramfs: mounted
+[  257.736374] miniramfs: unmounted (live files=0, live bytes=0)
+[  257.739810] miniramfs: mounted
+[  257.984826] miniramfs: unmounted (live files=0, live bytes=0)
+[  257.988951] miniramfs: mounted
+[  258.232691] miniramfs: unmounted (live files=0, live bytes=0)
+[  258.235697] miniramfs: mounted
+[  258.474738] miniramfs: unmounted (live files=0, live bytes=0)
+[  258.477897] miniramfs: mounted
+[  258.719893] miniramfs: unmounted (live files=0, live bytes=0)
+[  258.722826] miniramfs: mounted
+[  258.970018] miniramfs: unmounted (live files=0, live bytes=0)
+[  258.973210] miniramfs: mounted
+[  259.223662] miniramfs: unmounted (live files=0, live bytes=0)
+[  259.227828] miniramfs: mounted
+[  259.476247] miniramfs: unmounted (live files=0, live bytes=0)
+[  259.479657] miniramfs: mounted
+[  259.725915] miniramfs: unmounted (live files=0, live bytes=0)
+[  259.729167] miniramfs: mounted
+[  259.978446] miniramfs: unmounted (live files=0, live bytes=0)
+[  259.983255] miniramfs: mounted
+[  260.277458] miniramfs: unmounted (live files=0, live bytes=0)
+[  260.280903] miniramfs: mounted
+[  260.526533] miniramfs: unmounted (live files=0, live bytes=0)
+[  260.529582] miniramfs: mounted
+[  260.767883] miniramfs: unmounted (live files=0, live bytes=0)
+[  260.771336] miniramfs: mounted
+[  261.008242] miniramfs: unmounted (live files=0, live bytes=0)
+[  261.011513] miniramfs: mounted
+[  261.253685] miniramfs: unmounted (live files=0, live bytes=0)
+[  261.257587] miniramfs: mounted
+[  261.504335] miniramfs: unmounted (live files=0, live bytes=0)
+[  261.507364] miniramfs: mounted
+[  261.751753] miniramfs: unmounted (live files=0, live bytes=0)
+[  261.754876] miniramfs: mounted
+[  261.993263] miniramfs: unmounted (live files=0, live bytes=0)
+[  261.996688] miniramfs: mounted
+[  262.243298] miniramfs: unmounted (live files=0, live bytes=0)
+[  262.246275] miniramfs: mounted
+[  262.495135] miniramfs: unmounted (live files=0, live bytes=0)
+[  262.498256] miniramfs: mounted
+[  262.734045] miniramfs: unmounted (live files=0, live bytes=0)
+[  262.736978] miniramfs: mounted
+[  262.982657] miniramfs: unmounted (live files=0, live bytes=0)
+[  262.985474] miniramfs: mounted
+[  263.235780] miniramfs: unmounted (live files=0, live bytes=0)
+[  263.239331] miniramfs: mounted
+[  263.486988] miniramfs: unmounted (live files=0, live bytes=0)
+[  263.489925] miniramfs: mounted
+[  263.720674] miniramfs: unmounted (live files=0, live bytes=0)
+[  263.725424] miniramfs: mounted
+[  263.966109] miniramfs: unmounted (live files=0, live bytes=0)
+[  263.969267] miniramfs: mounted
+[  264.218324] miniramfs: unmounted (live files=0, live bytes=0)
+[  264.221471] miniramfs: mounted
+[  264.470311] miniramfs: unmounted (live files=0, live bytes=0)
+[  264.474264] miniramfs: mounted
+[  264.726171] miniramfs: unmounted (live files=0, live bytes=0)
+[  264.729837] miniramfs: mounted
+[  264.972813] miniramfs: unmounted (live files=0, live bytes=0)
+[  264.976245] miniramfs: mounted
+[  265.206588] miniramfs: unmounted (live files=0, live bytes=0)
+[  265.209765] miniramfs: mounted
+[  265.455057] miniramfs: unmounted (live files=0, live bytes=0)
+[  265.458617] miniramfs: mounted
+[  265.712667] miniramfs: unmounted (live files=0, live bytes=0)
+[  265.716014] miniramfs: mounted
+[  265.960488] miniramfs: unmounted (live files=0, live bytes=0)
+[  267.081065] miniramfs: module unloaded (live files=0, live bytes=0)
+[  273.647285] miniramfs: module loaded
+[  273.649658] miniramfs-leaktest-start
+[  273.655292] miniramfs: mounted
+[  273.662935] miniramfs: unmounted (live files=0, live bytes=0)
+[  274.758205] miniramfs: mounted
+[  275.016996] miniramfs: unmounted (live files=0, live bytes=0)
+[  275.020127] miniramfs: mounted
+[  275.269203] miniramfs: unmounted (live files=0, live bytes=0)
+[  275.273110] miniramfs: mounted
+[  275.516280] miniramfs: unmounted (live files=0, live bytes=0)
+[  275.519998] miniramfs: mounted
+[  275.767263] miniramfs: unmounted (live files=0, live bytes=0)
+[  275.770489] miniramfs: mounted
+[  276.022315] miniramfs: unmounted (live files=0, live bytes=0)
+[  276.026161] miniramfs: mounted
+[  276.267778] miniramfs: unmounted (live files=0, live bytes=0)
+[  276.271578] miniramfs: mounted
+[  276.518842] miniramfs: unmounted (live files=0, live bytes=0)
+[  276.522309] miniramfs: mounted
+[  276.777717] miniramfs: unmounted (live files=0, live bytes=0)
+[  276.781364] miniramfs: mounted
+[  277.028854] miniramfs: unmounted (live files=0, live bytes=0)
+[  277.032164] miniramfs: mounted
+[  277.279757] miniramfs: unmounted (live files=0, live bytes=0)
+[  277.283873] miniramfs: mounted
+[  277.534678] miniramfs: unmounted (live files=0, live bytes=0)
+[  277.537968] miniramfs: mounted
+[  277.790898] miniramfs: unmounted (live files=0, live bytes=0)
+[  277.793636] miniramfs: mounted
+[  278.041580] miniramfs: unmounted (live files=0, live bytes=0)
+[  278.045084] miniramfs: mounted
+[  278.297494] miniramfs: unmounted (live files=0, live bytes=0)
+[  278.301444] miniramfs: mounted
+[  278.543780] miniramfs: unmounted (live files=0, live bytes=0)
+[  278.546849] miniramfs: mounted
+[  278.790470] miniramfs: unmounted (live files=0, live bytes=0)
+[  278.793696] miniramfs: mounted
+[  279.040781] miniramfs: unmounted (live files=0, live bytes=0)
+[  279.044188] miniramfs: mounted
+[  279.289034] miniramfs: unmounted (live files=0, live bytes=0)
+[  279.292103] miniramfs: mounted
+[  279.540306] miniramfs: unmounted (live files=0, live bytes=0)
+[  279.543895] miniramfs: mounted
+[  279.793974] miniramfs: unmounted (live files=0, live bytes=0)
+[  279.797282] miniramfs: mounted
+[  280.043451] miniramfs: unmounted (live files=0, live bytes=0)
+[  280.046886] miniramfs: mounted
+[  280.301215] miniramfs: unmounted (live files=0, live bytes=0)
+[  280.304978] miniramfs: mounted
+[  280.546912] miniramfs: unmounted (live files=0, live bytes=0)
+[  280.550936] miniramfs: mounted
+[  280.788114] miniramfs: unmounted (live files=0, live bytes=0)
+[  280.791139] miniramfs: mounted
+[  281.034151] miniramfs: unmounted (live files=0, live bytes=0)
+[  281.037944] miniramfs: mounted
+[  281.281587] miniramfs: unmounted (live files=0, live bytes=0)
+[  281.285211] miniramfs: mounted
+[  281.536639] miniramfs: unmounted (live files=0, live bytes=0)
+[  281.540618] miniramfs: mounted
+[  281.791894] miniramfs: unmounted (live files=0, live bytes=0)
+[  281.795010] miniramfs: mounted
+[  282.040799] miniramfs: unmounted (live files=0, live bytes=0)
+[  282.044240] miniramfs: mounted
+[  282.293959] miniramfs: unmounted (live files=0, live bytes=0)
+[  282.297944] miniramfs: mounted
+[  282.535397] miniramfs: unmounted (live files=0, live bytes=0)
+[  282.538670] miniramfs: mounted
+[  282.778295] miniramfs: unmounted (live files=0, live bytes=0)
+[  282.781462] miniramfs: mounted
+[  283.020164] miniramfs: unmounted (live files=0, live bytes=0)
+[  283.024475] miniramfs: mounted
+[  283.261987] miniramfs: unmounted (live files=0, live bytes=0)
+[  283.265648] miniramfs: mounted
+[  283.510676] miniramfs: unmounted (live files=0, live bytes=0)
+[  283.513785] miniramfs: mounted
+[  283.764595] miniramfs: unmounted (live files=0, live bytes=0)
+[  283.768753] miniramfs: mounted
+[  284.014673] miniramfs: unmounted (live files=0, live bytes=0)
+[  284.018222] miniramfs: mounted
+[  284.262779] miniramfs: unmounted (live files=0, live bytes=0)
+[  284.266360] miniramfs: mounted
+[  284.513427] miniramfs: unmounted (live files=0, live bytes=0)
+[  284.517348] miniramfs: mounted
+[  284.755970] miniramfs: unmounted (live files=0, live bytes=0)
+[  284.759076] miniramfs: mounted
+[  285.004377] miniramfs: unmounted (live files=0, live bytes=0)
+[  285.008116] miniramfs: mounted
+[  285.254241] miniramfs: unmounted (live files=0, live bytes=0)
+[  285.257558] miniramfs: mounted
+[  285.500727] miniramfs: unmounted (live files=0, live bytes=0)
+[  285.504354] miniramfs: mounted
+[  285.754881] miniramfs: unmounted (live files=0, live bytes=0)
+[  285.757918] miniramfs: mounted
+[  286.002753] miniramfs: unmounted (live files=0, live bytes=0)
+[  286.005923] miniramfs: mounted
+[  286.251721] miniramfs: unmounted (live files=0, live bytes=0)
+[  286.255068] miniramfs: mounted
+[  286.499014] miniramfs: unmounted (live files=0, live bytes=0)
+[  286.502592] miniramfs: mounted
+[  286.742656] miniramfs: unmounted (live files=0, live bytes=0)
+[  286.745811] miniramfs: mounted
+[  286.993170] miniramfs: unmounted (live files=0, live bytes=0)
+[  286.996961] miniramfs: mounted
+[  287.252145] miniramfs: unmounted (live files=0, live bytes=0)
+[  287.255463] miniramfs: mounted
+[  287.499016] miniramfs: unmounted (live files=0, live bytes=0)
+[  287.503071] miniramfs: mounted
+[  287.733719] miniramfs: unmounted (live files=0, live bytes=0)
+[  287.736723] miniramfs: mounted
+[  287.978112] miniramfs: unmounted (live files=0, live bytes=0)
+[  287.981097] miniramfs: mounted
+[  288.218018] miniramfs: unmounted (live files=0, live bytes=0)
+[  288.221489] miniramfs: mounted
+[  288.466629] miniramfs: unmounted (live files=0, live bytes=0)
+[  288.470215] miniramfs: mounted
+[  288.719518] miniramfs: unmounted (live files=0, live bytes=0)
+[  288.723278] miniramfs: mounted
+[  288.964209] miniramfs: unmounted (live files=0, live bytes=0)
+[  288.967753] miniramfs: mounted
+[  289.222063] miniramfs: unmounted (live files=0, live bytes=0)
+[  289.225732] miniramfs: mounted
+[  289.476759] miniramfs: unmounted (live files=0, live bytes=0)
+[  289.479989] miniramfs: mounted
+[  289.724872] miniramfs: unmounted (live files=0, live bytes=0)
+[  289.728258] miniramfs: mounted
+[  289.967197] miniramfs: unmounted (live files=0, live bytes=0)
+[  289.970369] miniramfs: mounted
+[  290.211738] miniramfs: unmounted (live files=0, live bytes=0)
+[  290.214871] miniramfs: mounted
+[  290.466218] miniramfs: unmounted (live files=0, live bytes=0)
+[  290.469586] miniramfs: mounted
+[  290.722327] miniramfs: unmounted (live files=0, live bytes=0)
+[  290.725501] miniramfs: mounted
+[  290.977599] miniramfs: unmounted (live files=0, live bytes=0)
+[  290.980977] miniramfs: mounted
+[  291.219916] miniramfs: unmounted (live files=0, live bytes=0)
+[  291.223073] miniramfs: mounted
+[  291.469907] miniramfs: unmounted (live files=0, live bytes=0)
+[  291.473495] miniramfs: mounted
+[  291.727124] miniramfs: unmounted (live files=0, live bytes=0)
+[  291.731963] miniramfs: mounted
+[  292.049849] miniramfs: unmounted (live files=0, live bytes=0)
+[  292.054609] miniramfs: mounted
+[  292.331022] miniramfs: unmounted (live files=0, live bytes=0)
+[  292.335348] miniramfs: mounted
+[  292.573654] miniramfs: unmounted (live files=0, live bytes=0)
+[  292.577024] miniramfs: mounted
+[  292.821508] miniramfs: unmounted (live files=0, live bytes=0)
+[  292.824378] miniramfs: mounted
+[  293.064623] miniramfs: unmounted (live files=0, live bytes=0)
+[  293.069138] miniramfs: mounted
+[  293.306050] miniramfs: unmounted (live files=0, live bytes=0)
+[  293.309558] miniramfs: mounted
+[  293.556110] miniramfs: unmounted (live files=0, live bytes=0)
+[  293.559133] miniramfs: mounted
+[  293.809880] miniramfs: unmounted (live files=0, live bytes=0)
+[  293.813687] miniramfs: mounted
+[  294.060316] miniramfs: unmounted (live files=0, live bytes=0)
+[  294.064069] miniramfs: mounted
+[  294.304267] miniramfs: unmounted (live files=0, live bytes=0)
+[  294.308273] miniramfs: mounted
+[  294.546077] miniramfs: unmounted (live files=0, live bytes=0)
+[  294.549302] miniramfs: mounted
+[  294.788903] miniramfs: unmounted (live files=0, live bytes=0)
+[  294.792617] miniramfs: mounted
+[  295.034363] miniramfs: unmounted (live files=0, live bytes=0)
+[  295.037524] miniramfs: mounted
+[  295.289687] miniramfs: unmounted (live files=0, live bytes=0)
+[  295.292934] miniramfs: mounted
+[  295.545381] miniramfs: unmounted (live files=0, live bytes=0)
+[  295.549457] miniramfs: mounted
+[  295.800910] miniramfs: unmounted (live files=0, live bytes=0)
+[  295.805035] miniramfs: mounted
+[  296.055777] miniramfs: unmounted (live files=0, live bytes=0)
+[  296.059453] miniramfs: mounted
+[  296.298966] miniramfs: unmounted (live files=0, live bytes=0)
+[  296.302726] miniramfs: mounted
+[  296.545367] miniramfs: unmounted (live files=0, live bytes=0)
+[  296.548127] miniramfs: mounted
+[  296.786802] miniramfs: unmounted (live files=0, live bytes=0)
+[  296.791048] miniramfs: mounted
+[  297.035713] miniramfs: unmounted (live files=0, live bytes=0)
+[  297.039856] miniramfs: mounted
+[  297.288776] miniramfs: unmounted (live files=0, live bytes=0)
+[  297.292067] miniramfs: mounted
+[  297.545562] miniramfs: unmounted (live files=0, live bytes=0)
+[  297.549496] miniramfs: mounted
+[  297.793431] miniramfs: unmounted (live files=0, live bytes=0)
+[  297.796139] miniramfs: mounted
+[  298.045853] miniramfs: unmounted (live files=0, live bytes=0)
+[  298.048793] miniramfs: mounted
+[  298.289681] miniramfs: unmounted (live files=0, live bytes=0)
+[  298.292994] miniramfs: mounted
+[  298.534913] miniramfs: unmounted (live files=0, live bytes=0)
+[  298.538372] miniramfs: mounted
+[  298.785264] miniramfs: unmounted (live files=0, live bytes=0)
+[  298.788306] miniramfs: mounted
+[  299.075377] miniramfs: unmounted (live files=0, live bytes=0)
+[  299.078533] miniramfs: mounted
+[  299.326981] miniramfs: unmounted (live files=0, live bytes=0)
+[  299.329891] miniramfs: mounted
+[  299.581031] miniramfs: unmounted (live files=0, live bytes=0)
+[  299.584778] miniramfs: mounted
+[  299.833497] miniramfs: unmounted (live files=0, live bytes=0)
+[  300.945690] miniramfs: module unloaded (live files=0, live bytes=0)
+[  301.097931] miniramfs: module loaded
+[  301.100558] miniramfs-leaktest-start
+[  301.106950] miniramfs: mounted
+[  301.114291] miniramfs: unmounted (live files=0, live bytes=0)
+[  302.198978] miniramfs: mounted
+[  302.470360] miniramfs: unmounted (live files=0, live bytes=0)
+[  302.473590] miniramfs: mounted
+[  302.722282] miniramfs: unmounted (live files=0, live bytes=0)
+[  302.725662] miniramfs: mounted
+[  302.975191] miniramfs: unmounted (live files=0, live bytes=0)
+[  302.979516] miniramfs: mounted
+[  303.231123] miniramfs: unmounted (live files=0, live bytes=0)
+[  303.234998] miniramfs: mounted
+[  303.471482] miniramfs: unmounted (live files=0, live bytes=0)
+[  303.475455] miniramfs: mounted
+[  303.722773] miniramfs: unmounted (live files=0, live bytes=0)
+[  303.726484] miniramfs: mounted
+[  303.971507] miniramfs: unmounted (live files=0, live bytes=0)
+[  303.974648] miniramfs: mounted
+[  304.223990] miniramfs: unmounted (live files=0, live bytes=0)
+[  304.227806] miniramfs: mounted
+[  304.477040] miniramfs: unmounted (live files=0, live bytes=0)
+[  304.480371] miniramfs: mounted
+[  304.723470] miniramfs: unmounted (live files=0, live bytes=0)
+[  304.726620] miniramfs: mounted
+[  304.963105] miniramfs: unmounted (live files=0, live bytes=0)
+[  304.967572] miniramfs: mounted
+[  305.214518] miniramfs: unmounted (live files=0, live bytes=0)
+[  305.217995] miniramfs: mounted
+[  305.472786] miniramfs: unmounted (live files=0, live bytes=0)
+[  305.475627] miniramfs: mounted
+[  305.716488] miniramfs: unmounted (live files=0, live bytes=0)
+[  305.720029] miniramfs: mounted
+[  305.995421] miniramfs: unmounted (live files=0, live bytes=0)
+[  305.998965] miniramfs: mounted
+[  306.265549] miniramfs: unmounted (live files=0, live bytes=0)
+[  306.270022] miniramfs: mounted
+[  306.521369] miniramfs: unmounted (live files=0, live bytes=0)
+[  306.524440] miniramfs: mounted
+[  306.770821] miniramfs: unmounted (live files=0, live bytes=0)
+[  306.774046] miniramfs: mounted
+[  307.033005] miniramfs: unmounted (live files=0, live bytes=0)
+[  307.036687] miniramfs: mounted
+[  307.283791] miniramfs: unmounted (live files=0, live bytes=0)
+[  307.287492] miniramfs: mounted
+[  307.534569] miniramfs: unmounted (live files=0, live bytes=0)
+[  307.538338] miniramfs: mounted
+[  307.796433] miniramfs: unmounted (live files=0, live bytes=0)
+[  307.799627] miniramfs: mounted
+[  308.064532] miniramfs: unmounted (live files=0, live bytes=0)
+[  308.068194] miniramfs: mounted
+[  308.309603] miniramfs: unmounted (live files=0, live bytes=0)
+[  308.312947] miniramfs: mounted
+[  308.556651] miniramfs: unmounted (live files=0, live bytes=0)
+[  308.559806] miniramfs: mounted
+[  308.804676] miniramfs: unmounted (live files=0, live bytes=0)
+[  308.807841] miniramfs: mounted
+[  309.053226] miniramfs: unmounted (live files=0, live bytes=0)
+[  309.056650] miniramfs: mounted
+[  309.315747] miniramfs: unmounted (live files=0, live bytes=0)
+[  309.319497] miniramfs: mounted
+[  309.580860] miniramfs: unmounted (live files=0, live bytes=0)
+[  309.584832] miniramfs: mounted
+[  309.835662] miniramfs: unmounted (live files=0, live bytes=0)
+[  309.838794] miniramfs: mounted
+[  310.077564] miniramfs: unmounted (live files=0, live bytes=0)
+[  310.081138] miniramfs: mounted
+[  310.317778] miniramfs: unmounted (live files=0, live bytes=0)
+[  310.320825] miniramfs: mounted
+[  310.572514] miniramfs: unmounted (live files=0, live bytes=0)
+[  310.575938] miniramfs: mounted
+[  310.830651] miniramfs: unmounted (live files=0, live bytes=0)
+[  310.833694] miniramfs: mounted
+[  311.093287] miniramfs: unmounted (live files=0, live bytes=0)
+[  311.096923] miniramfs: mounted
+[  311.346255] miniramfs: unmounted (live files=0, live bytes=0)
+[  311.349284] miniramfs: mounted
+[  311.581037] miniramfs: unmounted (live files=0, live bytes=0)
+[  311.585172] miniramfs: mounted
+[  311.812543] miniramfs: unmounted (live files=0, live bytes=0)
+[  311.815855] miniramfs: mounted
+[  312.040729] miniramfs: unmounted (live files=0, live bytes=0)
+[  312.044557] miniramfs: mounted
+[  312.271013] miniramfs: unmounted (live files=0, live bytes=0)
+[  312.274037] miniramfs: mounted
+[  312.513430] miniramfs: unmounted (live files=0, live bytes=0)
+[  312.517469] miniramfs: mounted
+[  312.767118] miniramfs: unmounted (live files=0, live bytes=0)
+[  312.771248] miniramfs: mounted
+[  313.024727] miniramfs: unmounted (live files=0, live bytes=0)
+[  313.027806] miniramfs: mounted
+[  313.282083] miniramfs: unmounted (live files=0, live bytes=0)
+[  313.286349] miniramfs: mounted
+[  313.547745] miniramfs: unmounted (live files=0, live bytes=0)
+[  313.552431] miniramfs: mounted
+[  313.805719] miniramfs: unmounted (live files=0, live bytes=0)
+[  313.809047] miniramfs: mounted
+[  314.043879] miniramfs: unmounted (live files=0, live bytes=0)
+[  314.046756] miniramfs: mounted
+[  314.278203] miniramfs: unmounted (live files=0, live bytes=0)
+[  314.281218] miniramfs: mounted
+[  314.510661] miniramfs: unmounted (live files=0, live bytes=0)
+[  314.514593] miniramfs: mounted
+[  314.741198] miniramfs: unmounted (live files=0, live bytes=0)
+[  315.873200] miniramfs: module unloaded (live files=0, live bytes=0)
+[  327.045274] miniramfs: module loaded
+[  327.047337] miniramfs-leaktest-start
+[  327.053959] miniramfs: mounted
+[  327.061206] miniramfs: unmounted (live files=0, live bytes=0)
+[  328.147522] miniramfs: mounted
+[  328.411157] miniramfs: unmounted (live files=0, live bytes=0)
+[  328.414652] miniramfs: mounted
+[  328.671946] miniramfs: unmounted (live files=0, live bytes=0)
+[  328.675016] miniramfs: mounted
+[  328.933706] miniramfs: unmounted (live files=0, live bytes=0)
+[  328.937214] miniramfs: mounted
+[  329.195389] miniramfs: unmounted (live files=0, live bytes=0)
+[  329.199090] miniramfs: mounted
+[  329.452196] miniramfs: unmounted (live files=0, live bytes=0)
+[  329.455227] miniramfs: mounted
+[  329.716559] miniramfs: unmounted (live files=0, live bytes=0)
+[  329.719948] miniramfs: mounted
+[  329.982278] miniramfs: unmounted (live files=0, live bytes=0)
+[  329.987352] miniramfs: mounted
+[  330.248721] miniramfs: unmounted (live files=0, live bytes=0)
+[  330.252375] miniramfs: mounted
+[  330.509306] miniramfs: unmounted (live files=0, live bytes=0)
+[  330.513506] miniramfs: mounted
+[  330.775728] miniramfs: unmounted (live files=0, live bytes=0)
+[  330.779867] miniramfs: mounted
+[  331.040923] miniramfs: unmounted (live files=0, live bytes=0)
+[  331.044894] miniramfs: mounted
+[  331.309820] miniramfs: unmounted (live files=0, live bytes=0)
+[  331.312593] miniramfs: mounted
+[  331.566348] miniramfs: unmounted (live files=0, live bytes=0)
+[  331.569798] miniramfs: mounted
+[  331.834200] miniramfs: unmounted (live files=0, live bytes=0)
+[  331.837299] miniramfs: mounted
+[  332.091437] miniramfs: unmounted (live files=0, live bytes=0)
+[  332.094822] miniramfs: mounted
+[  332.355128] miniramfs: unmounted (live files=0, live bytes=0)
+[  332.359221] miniramfs: mounted
+[  332.615499] miniramfs: unmounted (live files=0, live bytes=0)
+[  332.619621] miniramfs: mounted
+[  332.869741] miniramfs: unmounted (live files=0, live bytes=0)
+[  332.873881] miniramfs: mounted
+[  333.134081] miniramfs: unmounted (live files=0, live bytes=0)
+[  333.137623] miniramfs: mounted
+[  333.398811] miniramfs: unmounted (live files=0, live bytes=0)
+[  333.402242] miniramfs: mounted
+[  333.659142] miniramfs: unmounted (live files=0, live bytes=0)
+[  333.663305] miniramfs: mounted
+[  333.926658] miniramfs: unmounted (live files=0, live bytes=0)
+[  333.930891] miniramfs: mounted
+[  334.190468] miniramfs: unmounted (live files=0, live bytes=0)
+[  334.194702] miniramfs: mounted
+[  334.452534] miniramfs: unmounted (live files=0, live bytes=0)
+[  334.456365] miniramfs: mounted
+[  334.718046] miniramfs: unmounted (live files=0, live bytes=0)
+[  334.721833] miniramfs: mounted
+[  334.994985] miniramfs: unmounted (live files=0, live bytes=0)
+[  334.998504] miniramfs: mounted
+[  335.252201] miniramfs: unmounted (live files=0, live bytes=0)
+[  335.254994] miniramfs: mounted
+[  335.516607] miniramfs: unmounted (live files=0, live bytes=0)
+[  335.520042] miniramfs: mounted
+[  335.773685] miniramfs: unmounted (live files=0, live bytes=0)
+[  335.777966] miniramfs: mounted
+[  336.040156] miniramfs: unmounted (live files=0, live bytes=0)
+[  336.043271] miniramfs: mounted
+[  336.302858] miniramfs: unmounted (live files=0, live bytes=0)
+[  336.307157] miniramfs: mounted
+[  336.565919] miniramfs: unmounted (live files=0, live bytes=0)
+[  336.569396] miniramfs: mounted
+[  336.832630] miniramfs: unmounted (live files=0, live bytes=0)
+[  336.836201] miniramfs: mounted
+[  337.102310] miniramfs: unmounted (live files=0, live bytes=0)
+[  337.105260] miniramfs: mounted
+[  337.359817] miniramfs: unmounted (live files=0, live bytes=0)
+[  337.363411] miniramfs: mounted
+[  337.613509] miniramfs: unmounted (live files=0, live bytes=0)
+[  337.617813] miniramfs: mounted
+[  337.886166] miniramfs: unmounted (live files=0, live bytes=0)
+[  337.889826] miniramfs: mounted
+[  338.155050] miniramfs: unmounted (live files=0, live bytes=0)
+[  338.159053] miniramfs: mounted
+[  338.424309] miniramfs: unmounted (live files=0, live bytes=0)
+[  338.428705] miniramfs: mounted
+[  338.683067] miniramfs: unmounted (live files=0, live bytes=0)
+[  338.686329] miniramfs: mounted
+[  338.956156] miniramfs: unmounted (live files=0, live bytes=0)
+[  338.960146] miniramfs: mounted
+[  339.223616] miniramfs: unmounted (live files=0, live bytes=0)
+[  339.227063] miniramfs: mounted
+[  339.484573] miniramfs: unmounted (live files=0, live bytes=0)
+[  339.488098] miniramfs: mounted
+[  339.734420] miniramfs: unmounted (live files=0, live bytes=0)
+[  339.738368] miniramfs: mounted
+[  340.001042] miniramfs: unmounted (live files=0, live bytes=0)
+[  340.004419] miniramfs: mounted
+[  340.262596] miniramfs: unmounted (live files=0, live bytes=0)
+[  340.266367] miniramfs: mounted
+[  340.519574] miniramfs: unmounted (live files=0, live bytes=0)
+[  340.523086] miniramfs: mounted
+[  340.780936] miniramfs: unmounted (live files=0, live bytes=0)
+[  340.784706] miniramfs: mounted
+[  341.047321] miniramfs: unmounted (live files=0, live bytes=0)
+[  341.050958] miniramfs: mounted
+[  341.316900] miniramfs: unmounted (live files=0, live bytes=0)
+[  342.443262] miniramfs: module unloaded (live files=0, live bytes=0)
+[  347.107105] miniramfs-demo-start
+[  350.159065] miniramfs: module loaded
+[  351.180028] miniramfs: mounted
+[  358.074301] miniramfs: unmounted (live files=0, live bytes=0)
+[  358.114897] miniramfs: module unloaded (live files=0, live bytes=0)
+[  370.514295] miniramfs-demo-start
+[  373.509867] miniramfs: module loaded
+[  374.510647] miniramfs: mounted
+[  381.374663] miniramfs: unmounted (live files=0, live bytes=0)
+[  381.432489] miniramfs: module unloaded (live files=0, live bytes=0)
