@@ -4,7 +4,7 @@
 #   repeated ROUNDS times; compare /proc/meminfo Slab + /proc/slabinfo before/after.
 #   kmemleak is used automatically if the kernel has it (/sys/kernel/debug/kmemleak).
 #
-# Run as root from src/ after `make`:   sudo bash ../tests/leak_test.sh
+# Run as root from mini-project-2/ after `make` in src/:   sudo bash tests/leak_test.sh
 # Log: docs/screenshots/logs/leak_test.log
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
