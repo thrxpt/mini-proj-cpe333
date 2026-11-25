@@ -1,0 +1,10 @@
+### 04 mkdir + ls
+$ cd /mnt/test && mkdir dir1 dir2 dir1/sub
+
+$ ls -la /mnt/test
+total 4
+drwxr-xr-x 4 root root    0 Nov 24 21:21 .
+drwxr-xr-x 8 root root 4096 Nov 24 21:21 ..
+drwxr-xr-x 3 root root    0 Nov 24 21:21 dir1
+drwxr-xr-x 2 root root    0 Nov 24 21:21 dir2
+

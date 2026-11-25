@@ -1,0 +1,19 @@
+### 03 insmod + mount
+$ insmod miniramfs.ko
+
+$ lsmod | grep miniramfs
+miniramfs              12288  0
+
+$ mkdir -p /mnt/test; mount -t miniramfs none /mnt/test
+
+$ mount | grep miniramfs
+none on /mnt/test type miniramfs (rw,relatime)
+
+$ df -T /mnt/test
+Filesystem     Type      1K-blocks  Used Available Use% Mounted on
+none           miniramfs         0     0         0    - /mnt/test
+
+$ dmesg | tail -3
+[ 2829.360821] miniramfs: module loaded
+[ 2829.376787] miniramfs: mounted
+
