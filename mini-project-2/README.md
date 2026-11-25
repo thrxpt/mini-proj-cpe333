@@ -57,13 +57,47 @@ Screenshot ที่แต่ละคนต้องถ่าย: `docs/screens
 ถ้า `make` ไม่เจอ build tree ให้ชี้เอง: `make KDIR=~/linux-6.8.12`
 (ต้องเป็น tree ที่ใช้ build kernel ที่กำลังรันอยู่ และเคยรัน `make modules_prepare` / `modules_install`)
 
+## Screenshots
+
+**1. Environment**
+
+![01 env](docs/screenshots/01-env.png)
+
+**2. Build**
+
+![02 build](docs/screenshots/02-build.png)
+
+**3. Mount**
+
+![03 mount](docs/screenshots/03-mount.png)
+
+**4. mkdir / ls**
+
+![04 mkdir ls](docs/screenshots/04-mkdir-ls.png)
+
+**5. File operations**
+
+![05 file ops](docs/screenshots/05-file-ops.png)
+
+**6. umount / rmmod**
+
+![06 umount rmmod](docs/screenshots/06-umount-rmmod.png)
+
+**7. Functional test (36/36 passed)**
+
+![07 functional test](docs/screenshots/07-functional-test-36.png)
+
+**8. Memory leak test**
+
+![08 memory leak](docs/screenshots/08-memory-leak.png)
+
 ## สถานะ
 
 - [x] Skeleton โค้ดครบ 7 operations (เขียนตาม API ของ kernel 6.8)
 - [x] compile ผ่านบน 6.8.12-fuse2005 (0 error / 0 warning, ไม่ต้องแก้ miniramfs.c)
 - [x] รัน test script ผ่านทุกข้อ (S4: 36/36 รวม EDGE-7..10, ดู `tests/test_result.log`)
 - [x] Leak test 50 รอบผ่าน (live files=0, live bytes=0) และไม่มี Oops; log + dmesg อยู่ที่ `docs/screenshots/logs/`
-- [ ] ถ่าย screenshot ตาม `docs/screenshots/CHECKLIST.md`
+- [x] ถ่าย screenshot ตาม `docs/screenshots/CHECKLIST.md`
 - [ ] รายงาน / สไลด์ / วิดีโอ
 
 ## จุดที่ต้องตรวจเมื่อ compile (ขึ้นกับเวอร์ชัน kernel)
