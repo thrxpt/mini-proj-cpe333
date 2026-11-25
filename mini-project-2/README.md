@@ -21,8 +21,6 @@ mini-project-2/
     ├── TESTING.md         ← คู่มือให้ทุกคนรันเทส + แคปภาพเอง
     ├── architecture.md    ← แผนผังฟังก์ชัน/struct (สำหรับบทที่ 3)
     ├── env.md             ← เวอร์ชัน gcc/kernel/headers
-    ├── report/            ← รายงาน ≤ 25 หน้า (ไม่รวม appendix)
-    ├── screenshots/       ← ภาพผลทดสอบ / dmesg
     └── video/             ← สคริปต์และคลิป 7–11 นาที
 ```
 

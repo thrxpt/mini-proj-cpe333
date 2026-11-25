@@ -1,5 +1,0 @@
-### 01 env
-$ uname -r && gcc --version | head -1
-6.8.12-fuse2005
-gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
-
