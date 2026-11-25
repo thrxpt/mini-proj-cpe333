@@ -66,11 +66,11 @@ sudo bash tests/demo.sh                      # ~2 min demo for the video
 
 ## Members
 
-| Nickname | Name | Student ID |
-|----------|------|------------|
-| — | Kamonnat Seetakai | 67070501001 |
-| Pink | Benyapha Rattanakhunodom | 67070501030 |
-| Posh | Pawarisa Thongchua | 67070501032 |
-| — | Chanya Poolketkij | 67070501058 |
-| Japan | Theeraphat Jaingam | 67070501063 |
-| Fuse | Onsinee Chotchuangsakulchai | 67070501078 |
+| Name | Student ID |
+|------|------------|
+| Kamonnat Seetakai | 67070501001 |
+| Benyapha Rattanakhunodom | 67070501030 |
+| Pawarisa Thongchua | 67070501032 |
+| Chanya Poolketkij | 67070501058 |
+| Theeraphat Jaingam | 67070501063 |
+| Onsinee Chotchuangsakulchai | 67070501078 |
