@@ -15,13 +15,18 @@ mini-project-2/
 │   ├── miniramfs.c        ← โค้ดหลัก (Milestone 1–3 ครบใน skeleton)
 │   └── Makefile
 ├── tests/
-│   └── test_miniramfs.sh  ← TC-01..TC-07 + edge cases
+│   ├── test_miniramfs.sh  ← TC-01..TC-07 + EDGE-1..10
+│   ├── leak_test.sh       ← memory leak test 50 rounds
+│   ├── demo.sh            ← demo for recording the clip (~2 min)
+│   └── test_result.log
 └── docs/
     ├── assignment.pdf     ← โจทย์จากอาจารย์
     ├── TESTING.md         ← คู่มือให้ทุกคนรันเทส + แคปภาพเอง
     ├── architecture.md    ← แผนผังฟังก์ชัน/struct (สำหรับบทที่ 3)
     ├── env.md             ← เวอร์ชัน gcc/kernel/headers
     └── screenshots/       ← ภาพผลทดสอบ / dmesg (เทอร์มินัลจริง)
+        ├── CHECKLIST.md   ← screenshots each member must take
+        └── logs/          ← test / leak / dmesg logs
 ```
 
 ## Build & Run (บน kernel 6.8.12-fuse2005 / Ubuntu 24.04 / WSL2)
