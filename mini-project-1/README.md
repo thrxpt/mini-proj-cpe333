@@ -1,62 +1,38 @@
 # Mini-Project 1: Ubuntu Kernel Compilation
 
-CPE333 Operating Systems Mini-Project 1 — compile and install a Linux kernel on Ubuntu 24.04 LTS, with a step-by-step worklog of everything actually done.
+CPE333 Operating Systems Mini-Project 1: compile and install a Linux kernel on Ubuntu 24.04 LTS, with a step-by-step worklog of everything actually done.
 
-## Members
-
-| Nickname | Name | Student ID | Folder |
-|----------|------|------------|--------|
-| — | Kamonnat Seetakai | 67070501001 | — |
-| Pink | Benyapha Rattanakhunodom | 67070501030 | `member/Pink/` |
-| Posh | Pawarisa Thongchua | 67070501032 | `member/Posh/` |
-| — | Chanya Poolketkij | 67070501058 | — |
-| Japan | Theeraphat Jaingam | 67070501063 | `member/Japan/` |
-| Fuse | Onsinee Chotchuangsakulchai | 67070501078 | `member/Fuse/` |
-
-Each member's work and worklog lives in their own folder under `member/`.
+**Done by:** Fuse (Onsinee Chotchuangsakulchai, 67070501078)
 
 ## File Structure
 
 ```
 mini-project-1/
-├── README.md
-└── member/
-    ├── Fuse/
-    │   ├── Kernel-Compilation-Worklog.md
-    │   └── Image/        
-    ├── Pink/
-    └── Posh/
+├── README.md                        ← this file (summary + project spec)
+├── Kernel-Compilation-Worklog.md    ← full step-by-step worklog
+└── images/                          ← screenshots, named by spec section
+    ├── 1.1-hardware-specifications.png
+    ├── 1.2-os-original-kernel.png
+    ├── 2.1-dependencies-installation.png
+    ├── 2.2-obtaining-and-extracting-kernel-source-code.png
+    ├── 2.3-kernel-configuration.png
+    ├── 2.4-compiling-the-kernel-source.png
+    ├── 2.5-installing-kernel-modules-and-system-kernel.png
+    └── 3.2-verification-of-kernel-installation.png
 ```
 
-## Project Status
+## Build Result
 
-| Member | Environment | Status |
-|--------|-------------|--------|
-| Fuse | WSL2 Ubuntu 24.04 | Build + boot passed (`6.8.12-fuse2005`), worklog done |
-| Pink | — | Pending |
-| Posh | — | Pending |
-| Japan | — | Pending |
-
-## Build Results Summary
-
-| Member | CPU / RAM | Build time (`make -j`) | Kernel result | Boot test |
-|--------|-----------|------------------------|---------------|-----------|
-| Fuse | Ryzen 7 8840U, 16 vCPU / 15 GiB | ~27 min (`-j16`) | `6.8.12-fuse2005` | Passed (WSL2 + rollback round-trip) |
-| Pink | TBD | TBD | TBD | TBD |
-| Posh | TBD | TBD | TBD | TBD |
-| Japan | TBD | TBD | TBD | TBD |
-
-Each member fills in their own row after their build finishes (spec section 5.1).
+| Environment | CPU / RAM | Build time (`make -j`) | Kernel | Boot / Rollback |
+|-------------|-----------|------------------------|--------|-----------------|
+| WSL2 Ubuntu 24.04 | Ryzen 7 8840U, 16 vCPU / 15 GiB | ~27 min (`-j16`) | `6.8.12-fuse2005` | Passed (WSL2 + rollback round-trip) |
 
 ## Deliverables Checklist
 
-- [x] Fuse worklog (`member/Fuse/Kernel-Compilation-Worklog.md`)
-- [ ] Pink worklog
-- [ ] Posh worklog
-- [ ] Japan worklog
-- [ ] Screenshots in each member's `Image/` folder (GRUB menu, `uname -r`, rollback)
-- [ ] Team comparison table completed (all rows filled)
-- [ ] Final group report (`REPORT.md`)
+- [x] Worklog ([`Kernel-Compilation-Worklog.md`](Kernel-Compilation-Worklog.md))
+- [x] Screenshots for sections 1.1, 1.2, 2.1–2.5, 3.2 ([`images/`](images/))
+- [ ] Screenshots of the GRUB menu (3.1) and GRUB rollback (3.3): these need a VMware/VirtualBox VM
+- [ ] Final report (`REPORT.md`)
 
 ## References
 

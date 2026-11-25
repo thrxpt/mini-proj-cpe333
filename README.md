@@ -6,15 +6,16 @@ This repo holds both mini-projects of the course. Each one lives in its own fold
 
 | Project | Topic | Folder | Status |
 |:--|:--|:--|:--|
-| **Mini-Project 1** | Ubuntu Kernel Compilation and Installation | [`mini-project-1/`](mini-project-1/) | Fuse's build passed; other members pending |
+| **Mini-Project 1** | Ubuntu Kernel Compilation and Installation | [`mini-project-1/`](mini-project-1/) | Build + boot passed (`6.8.12-fuse2005`) |
 | **Mini-Project 2** | Mini RAM-Based File System on Linux VFS | [`mini-project-2/`](mini-project-2/) | Code and tests passed (36/36, no leak); screenshots/report/video pending |
 
 ```
 .
 ├── README.md                     ← this file
 ├── mini-project-1/
-│   ├── README.md                 ← spec, member table, build results
-│   └── member/<Name>/            ← each member's worklog + Image/
+│   ├── README.md                 ← summary, build result, spec
+│   ├── Kernel-Compilation-Worklog.md
+│   └── images/                   ← screenshots by spec section
 └── mini-project-2/
     ├── README.md                 ← build & test instructions
     ├── PLAN.md                   ← team roles, test plan, video script
@@ -27,16 +28,14 @@ This repo holds both mini-projects of the course. Each one lives in its own fold
 
 ## Mini-Project 1: Ubuntu Kernel Compilation and Installation
 
-Each member compiles and installs a Linux kernel on Ubuntu 24.04 LTS on their own machine or VM. Then each member checks it boots via GRUB, tests rolling back to the old kernel, and compares build time across the team.
+Compile and install a Linux kernel on Ubuntu 24.04 LTS, check that it boots, and test rolling back to the old kernel. Done by **Fuse**.
 
-| Member | Environment | Build time | Kernel | Boot / Rollback |
-|:--|:--|:--|:--|:--|
-| Fuse | WSL2 Ubuntu 24.04, Ryzen 7 8840U, 16 vCPU / 15 GiB | ~27 min (`-j16`) | `6.8.12-fuse2005` | Passed |
-| Pink | — | TBD | TBD | TBD |
-| Posh | — | TBD | TBD | TBD |
-| Japan | — | TBD | TBD | TBD |
+| Environment | Build time | Kernel | Boot / Rollback |
+|:--|:--|:--|:--|
+| WSL2 Ubuntu 24.04, Ryzen 7 8840U, 16 vCPU / 15 GiB | ~27 min (`-j16`) | `6.8.12-fuse2005` | Passed |
 
-- Fuse's worklog: [`mini-project-1/member/Fuse/Kernel-Compilation-Worklog.md`](mini-project-1/member/Fuse/Kernel-Compilation-Worklog.md)
+- Worklog: [`mini-project-1/Kernel-Compilation-Worklog.md`](mini-project-1/Kernel-Compilation-Worklog.md)
+- Screenshots: [`mini-project-1/images/`](mini-project-1/images/)
 - Full spec + deliverables checklist: [`mini-project-1/README.md`](mini-project-1/README.md)
 
 ---

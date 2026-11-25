@@ -215,7 +215,7 @@ $ uptime → system up and functional right after reboot
 - [x] After reboot, `uname -r` shows `6.8.12-fuse2005`
 - [x] `dmesg` is clean (only harmless WSL2/Hyper-V notices about the legacy timer, ACPI _OSC, and a WSL network check)
 - [x] Rollback tested with a full round-trip (see 3.3 below)
-- [x] Screenshots in `member/Fuse/Image/` (1.1, 1.2, 2.1-2.5, 3.2); GRUB menu (3.1) and GRUB rollback (3.3) still need a VM
+- [x] Screenshots in `images/` (1.1, 1.2, 2.1-2.5, 3.2); GRUB menu (3.1) and GRUB rollback (3.3) still need a VM
 
 ### 3.3 Rollback test (my actual round-trip on WSL2)
 
@@ -258,8 +258,8 @@ variant of this test still needs a VMware/VirtualBox VM.
 - **Stock vs custom:** the stock `6.6.87.2-microsoft-standard-WSL2` kernel vs my custom `6.8.12-fuse2005` (newer upstream 6.8 base, same WSL2 driver options, built with Ubuntu GCC 13.3.0 and tagged `-fuse2005`). My boot log confirms the Hyper-V/WSL2 integration still works.
 - **VM vs WSL2:** a VM gives the full GRUB/initramfs/dkms boot test with snapshots; WSL2 gave me a fast 16-core build (~27 minutes vs hours on a 2-vCPU VM) but boots via a `.wslconfig` kernel replacement instead of GRUB. I executed the WSL2 path end to end.
 - **Cost:** 136 MB download → ~12 GB build tree + 2.3 GB installed modules + 218 MB initramfs; about 30 minutes wall-clock with `-j16` and 15 GiB RAM. On a 2-vCPU/4 GB lab VM I would expect 2–4x longer.
-- **Conclusion:** I compiled, installed, and booted my custom kernel `6.8.12-fuse2005` on Ubuntu 24.04 (WSL2). `uname -r`, `/proc/version`, `dmesg`, and the module tree all confirm the new kernel is live. Remaining work: add screenshots to `member/Fuse/Image/`, and repeat the GRUB path once on a VMware/VirtualBox VM with the same source and config method.
-- **Team matrix (spec 5.1, waiting on teammates):** only my build data exists so far (Ryzen 7 8840U / 16 vCPU / 15 GiB RAM / ~27 min / success). Each member adds one row (hardware, build time, outcome) once their build is done; Pink and Posh folders are reserved for their worklogs.
+- **Conclusion:** I compiled, installed, and booted my custom kernel `6.8.12-fuse2005` on Ubuntu 24.04 (WSL2). `uname -r`, `/proc/version`, `dmesg`, and the module tree all confirm the new kernel is live. Remaining work: add the remaining screenshots to `images/`, and repeat the GRUB path once on a VMware/VirtualBox VM with the same source and config method.
+- **Build summary (spec 5.1):** Ryzen 7 8840U / 16 vCPU / 15 GiB RAM / ~27 min (`-j16`) / success.
 
 ### My method vs the other group's method
 
