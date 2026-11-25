@@ -21,7 +21,7 @@ mini-project-2/
     ├── TESTING.md         ← คู่มือให้ทุกคนรันเทส + แคปภาพเอง
     ├── architecture.md    ← แผนผังฟังก์ชัน/struct (สำหรับบทที่ 3)
     ├── env.md             ← เวอร์ชัน gcc/kernel/headers
-    └── video/             ← สคริปต์และคลิป 7–11 นาที
+    └── screenshots/       ← ภาพผลทดสอบ / dmesg (เทอร์มินัลจริง)
 ```
 
 ## Build & Run (บน kernel 6.8.12-fuse2005 / Ubuntu 24.04 / WSL2)
