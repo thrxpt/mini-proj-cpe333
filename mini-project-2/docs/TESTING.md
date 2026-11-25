@@ -64,7 +64,7 @@ cd ~/mini-proj-cpe333/mini-project-2/src
 sudo bash ../tests/test_miniramfs.sh      # ผลเก็บใน test_result.log
 ```
 
-ต้องได้ `=== RESULT: 21 passed, 0 failed ===` แคปภาพนี้เป็น 07-test-suite
+ต้องได้ `=== RESULT: 36 passed, 0 failed ===` แคปภาพนี้เป็น 07-functional-test-36
 สคริปต์จะ insmod/mount เอง จึงต้อง **ไม่มี** miniramfs โหลดค้างก่อนรัน (`lsmod | grep miniramfs` ต้องว่าง)
 
 ## 5. ปัญหาที่เจอบ่อย
