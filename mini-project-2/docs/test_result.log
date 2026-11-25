@@ -1,0 +1,83 @@
+=== miniramfs test  Tue Nov 24 20:39:16 +07 2026 | kernel 6.8.12-fuse2005 ===
+[PASS] TC-01  insmod + mount
+[PASS] TC-01  fs visible in mount
+[PASS] TC-01  fs visible in /proc/filesystems
+[PASS] TC-02  mkdir docs + nested sub
+[PASS] TC-03  ls -la shows . .. docs
+[PASS] TC-04  echo > file
+[PASS] TC-04  touch empty file
+[PASS] TC-05  cat returns written text
+[PASS] TC-05  read empty file = 0 bytes
+[PASS] TC-06  append (>>) size = 17
+[PASS] TC-06  append content
+[PASS] TC-06  overwrite (>) size = 4
+[PASS] TC-06  overwrite content
+[PASS] EDGE-1  deep nesting (5 levels)
+[PASS] EDGE-2  large write 512 KiB
+[PASS] EDGE-3  file > 1 MiB rejected
+[PASS] EDGE-4  unlink file
+[PASS] EDGE-5  rmdir empty dir
+[PASS] EDGE-6  read missing file fails
+--- tree ---
+/mnt/test:
+total 4
+drwxr-xr-x 4 root root       0 Nov 24 20:39 .
+drwxr-xr-x 8 root root    4096 Nov 24 20:39 ..
+drwxr-xr-x 3 root root       0 Nov 24 20:39 a
+-rw-r--r-- 1 root root  524288 Nov 24 20:39 big.bin
+drwxr-xr-x 3 root root       0 Nov 24 20:39 docs
+-rw-r--r-- 1 root root 1048576 Nov 24 20:39 toobig.bin
+
+/mnt/test/a:
+total 0
+drwxr-xr-x 3 root root 0 Nov 24 20:39 .
+drwxr-xr-x 4 root root 0 Nov 24 20:39 ..
+drwxr-xr-x 3 root root 0 Nov 24 20:39 b
+
+/mnt/test/a/b:
+total 0
+drwxr-xr-x 3 root root 0 Nov 24 20:39 .
+drwxr-xr-x 3 root root 0 Nov 24 20:39 ..
+drwxr-xr-x 3 root root 0 Nov 24 20:39 c
+
+/mnt/test/a/b/c:
+total 0
+drwxr-xr-x 3 root root 0 Nov 24 20:39 .
+drwxr-xr-x 3 root root 0 Nov 24 20:39 ..
+drwxr-xr-x 3 root root 0 Nov 24 20:39 d
+
+/mnt/test/a/b/c/d:
+total 0
+drwxr-xr-x 3 root root 0 Nov 24 20:39 .
+drwxr-xr-x 3 root root 0 Nov 24 20:39 ..
+drwxr-xr-x 2 root root 0 Nov 24 20:39 e
+
+/mnt/test/a/b/c/d/e:
+total 0
+drwxr-xr-x 2 root root 0 Nov 24 20:39 .
+drwxr-xr-x 3 root root 0 Nov 24 20:39 ..
+-rw-r--r-- 1 root root 5 Nov 24 20:39 f.txt
+
+/mnt/test/docs:
+total 0
+drwxr-xr-x 3 root root 0 Nov 24 20:39 .
+drwxr-xr-x 4 root root 0 Nov 24 20:39 ..
+-rw-r--r-- 1 root root 4 Nov 24 20:39 note.txt
+drwxr-xr-x 2 root root 0 Nov 24 20:39 sub
+
+/mnt/test/docs/sub:
+total 0
+drwxr-xr-x 2 root root 0 Nov 24 20:39 .
+drwxr-xr-x 3 root root 0 Nov 24 20:39 ..
+[PASS] TC-07  umount
+[PASS] TC-07  rmmod
+--- dmesg (last 15 miniramfs lines) ---
+[  257.517164] miniramfs: module loaded
+[  257.520502] miniramfs: mounted
+[  257.588398] miniramfs: unmounted
+[  257.624482] miniramfs: module unloaded
+[  273.441906] miniramfs: module loaded
+[  273.445517] miniramfs: mounted
+[  273.532163] miniramfs: unmounted
+[  273.559574] miniramfs: module unloaded
+=== RESULT: 21 passed, 0 failed ===
